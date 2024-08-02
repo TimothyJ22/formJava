@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário brabo</h1>
+    <form id="formu">
+
+        <br><br>
+            <label for="nom">Nome</label> 
+            <input type="text" id="nom" required> *
+        <br>
+
+        <br>
+            <label for="endereço">Endereço</label>
+            <input type="text" id="end" required> *
+        <br>
+
+        <br>
+            <label for="tel">Telefone</label>
+            <input type="tel" id="tel" required> *
+        <br>
+
+        <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" required> *
+        <br>
+
+        <br>
+            <label for="Data de nasci">Data de nascimento</label>
+            <input type="date" id="nasc" required> 
+        <br>
+
+        <br>
+        <label for="gen">Gênero</label>
+            <select name="gen" id="gen">Gênero
+            <option value="masc">Masculino</option>
+            <option value="fem">Fêminino</option>
+            <option value="nqr">Não quero responder</option>
+        </select>
+
+           <label for="natur">Naturalidade</label>
+           <select name="natu" id="natu">
+        </select>
+        <br>
+
+        <br>
+        <button type="submit" onclick="confirm()" id="meuBotao">Submit</button>
+    </form>
+        <script>
+            function confirm(){
+            var n = document.getElementById('nom')
+            var e = document.getElementById('end')
+            var t = document.getElementById('tel')
+            var m = document.getElementById('email') 
+
+            n.onblur = function(){
+                if(n.value == ""){
+                    n.style.borderColor = 'red';
+                    alert("Campo obrigatório")
+                }
+            }
+
+            e.onblur = function(){
+                if(e.value == ""){
+                    e.style.borderColor = 'red';
+                    alert("Campo obrigatório")
+                }
+            }
+
+            t.onblur = function(){
+                if(t.value == ""){
+                    t.style.borderColor = 'red';
+                    alert("Campo obrigatório")
+                }
+            }
+
+            m.onblur = function(){
+                if(m.value == ""){
+                    m.style.borderColor = 'red';
+                    alert("Campo obrigatório")
+                }
+            }
+
+          
+        }
+    
+        
+
+</script>
+</body>
+</html>
